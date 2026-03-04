@@ -6,11 +6,11 @@ import menu from '../assets/menu.svg'
 import moped from '../assets/moped.svg'
 import search from'../assets/search.svg'
 
-function Nav(){
+export default function Nav() {
     return(
         <nav>
             <a id='home' href="/">welp<img src={moped} alt=""></img></a>
-            <form id="search-wrapper" action="/pages/search.html" method="get" autoComplete="off">
+            <form id="search-wrapper" action="/search" method="get" autoComplete="off">
                 <input type="search" placeholder="Search" name="q"></input>
                 <button type="submit" value=""><img className="icon" src={search} alt=""></img></button>
             </form>
@@ -31,5 +31,3 @@ function Nav(){
         </nav>
     );
 }
-
-export default Nav;
