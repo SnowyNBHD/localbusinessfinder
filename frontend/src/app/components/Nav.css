@@ -16,7 +16,7 @@ nav {
 }
 
 #home {
-  font-family: var(--font-nunito);
+    font-family: "Nunito";
     height: 1lh;
     font-size: 1.5em;
     font-weight: 800;

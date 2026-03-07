@@ -1,33 +1,36 @@
+"use client";
+
 import React from 'react';
+import Link from 'next/link';
 
 import './Nav.css';
-
-import menu from '../assets/menu.svg'
-import moped from '../assets/moped.svg'
-import search from'../assets/search.svg'
+import { TbMoped, TbMenu, TbSearch } from "react-icons/tb";
+import { IconContext } from 'react-icons';
 
 export default function Nav() {
     return(
         <nav>
-            <a id='home' href="/">welp<img src={moped} alt=""></img></a>
+            <IconContext.Provider value={{ style: { verticalAlign: 'middle'} }}>
+            <Link id='home' href="/">welp  <TbMoped size="2em"/></Link>
             <form id="search-wrapper" action="/search" method="get" autoComplete="off">
                 <input type="search" placeholder="Search" name="q"></input>
-                <button type="submit" value=""><img className="icon" src={search} alt=""></img></button>
+                <button type="submit" value=""><TbSearch size="1.2em"/></button>
             </form>
                 
             <input type="checkbox" id="menu-toggle"/>
                 
             <label htmlFor="menu-toggle" className="hamburger-icon">
-                <img src={menu} alt=""></img>
+                <TbMenu size="2em"/>
             </label>
             
             <div id="nav-wrapper">
-                <a href="/about">About</a>
+                <Link href="/about">About</Link>
                 <div className="divider"></div>
-                <a href="/contact">Contact Us</a>
+                <Link href="/contact">Contact Us</Link>
                 <div className="divider"></div>
-                <a href="/feedback">Send Feedback</a>
+                <Link href="/feedback">Send Feedback</Link>
             </div>
+            </IconContext.Provider>
         </nav>
     );
 }
