@@ -1,6 +1,7 @@
 .main {
     padding-top: 0px;
     overflow-x:hidden;
+
 }
 
 .featured {
@@ -28,9 +29,11 @@
     top: 0px;
     z-index: 98;
     height: 80px;
-    width: 100vw;
+
+    margin: 32px;
+    border-radius: 20px;
     
-    background: linear-gradient(45deg, light-dark(#cfafef, #301040), light-dark(#cfcfef, #101020));
+    background: linear-gradient(45deg, light-dark(#dfbfff, #271730), light-dark(#cfefff, #272030));
     box-shadow: 0px 4px 8px #000000a0;
     
     font-size: 1.6em;
@@ -40,4 +43,12 @@
     align-items: center;
     
     transition: color .2s;
+}
+
+.verticalDivider {
+    height: 8px;
+    background: none;
+    
+    border-radius: 4px;
+    margin: 8px 16px 8px 16px;
 }

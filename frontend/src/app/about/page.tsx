@@ -1,10 +1,10 @@
 import styles from "./page.module.css";
-import Nav from '../components/Nav'
+import Page from "../components/Page";
 
-export default function Home() {
+export default function About() {
   return (
-    <div className={styles.page}>
-      <Nav />
-    </div>
+    <Page styles={styles}>
+        <></>
+    </Page>
   );
 }

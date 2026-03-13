@@ -12,30 +12,37 @@
 }
 
 body {
-    background-color: light-dark(#dfdfdf, #202020);
+    background-color: light-dark(#fdfdfd, #202020);
     width: 100vw;
     height: 100vh;
-    
     display: flex;
     flex-direction: column;
 }
 
-#main {
-    /*background: linear-gradient(in hsl, #e66465, #9198e5);*/
-    background: linear-gradient(in hsl, light-dark(#4040ff70, #00002070), light-dark(#40a0ff00, #00001000));
-    border-top: solid 2px light-dark(7f7f7f, #7f7f7f);
+.page {
+    display: flex;
     flex-grow: 1;
-    padding-top: 80px;
+    flex-direction: column;
 }
 
+.main {
+    /*background: linear-gradient(in hsl, #e66465, #9198e5);*/
+    background: linear-gradient(in hsl, light-dark(#6030ff, #201050), light-dark(#a0a0ff, #101020), light-dark(#ffffff, #222024));
+    background-attachment: fixed;
+    border-top: solid 2px light-dark(7f7f7f, #7f7f7f);
+    flex-grow: 1;
+    /* padding-top: 80px; */
+}s
+
 footer {
-    background-color: light-dark(#ffffff20, #00000020);
     color: light-dark(#202020, #afafaf);
     
     box-shadow: 0 0 8px 4px #00000040;
     
     display: flex;
     align-items: center;
+
+    justify-self: end;
     
     
     padding: 8px;
@@ -45,24 +52,6 @@ footer {
     white-space: nowrap;
     overflow: clip;
     text-overflow: ellipsis;
-}
-
-.divider {
-    width: 4px;
-    margin: 4px;
-    height: 32px;
-    background-color: light-dark(#efefef60 ,#10101060);
-    border-radius: 12px;
-    
-    box-shadow: 0px 0px 4px 4px #00000010;
-}
-
-.vertical-divider {
-    height: 8px;
-    background-color: light-dark(#10101030, #101010e0);
-    
-    border-radius: 4px;
-    margin: 8px 16px 8px 16px;
 }
 
 input {
