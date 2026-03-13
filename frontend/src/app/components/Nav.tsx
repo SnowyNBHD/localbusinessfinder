@@ -10,17 +10,20 @@ import { IconContext } from 'react-icons';
 export default function Nav() {
     return(
         <nav>
-            <IconContext.Provider value={{ style: { verticalAlign: 'middle'} }}>
-            <Link id='home' href="/">welp  <TbMoped size="2em"/></Link>
+            <IconContext.Provider value={{ style: { verticalAlign: 'bottom'} }}>
+            <Link id='home' href="/">welp  <TbMoped size="2em" stroke='#ffffff'/> </Link>
             <form id="search-wrapper" action="/search" method="get" autoComplete="off">
                 <input type="search" placeholder="Search" name="q"></input>
-                <button type="submit" value=""><TbSearch size="1.2em"/></button>
+                <button type="submit" value=""> <TbSearch size="1.2em"/> </button>
             </form>
                 
             <input type="checkbox" id="menu-toggle"/>
                 
             <label htmlFor="menu-toggle" className="hamburger-icon">
-                <TbMenu size="2em"/>
+                <TbMenu
+                    size="2em"
+                    stroke='#ffffff'
+                />
             </label>
             
             <div id="nav-wrapper">
