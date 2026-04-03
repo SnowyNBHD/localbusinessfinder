@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+  color-scheme: light dark; /* Informs the browser that both schemes are supported */
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    color: light-dark(#000000, #ffffff);
+    font-family: "Lexend Deca", sans-serif;
+}

@@ -1,0 +1,3 @@
+TRUNCATE TABLE business;
+TRUNCATE TABLE review;
+TRUNCATE TABLE users;
