@@ -1,0 +1,74 @@
+{
+    "000000": {
+        "name": "McDonalds",
+        "type": "Dining",
+        "priceScore": "1.0",
+        "avgRating": "2.5",
+        "description": "Fast-Food Restaurant",
+        "featured": "true",
+        "uploader": "000004",
+        "reviews": {
+            "000000": {
+                "content": "This place blows.",
+                "score": "2.0",
+                "uploader": "000000"
+            },
+            "000001": {
+                "content": "Not too shabby",
+                "score": "3.0",
+                "uploader": "000001"
+            }
+        }
+    },
+    
+    "000001": {
+        "name": "Adenza Di Zeka",
+        "type": "Dining",
+        "price-score": "2.6",
+        "avgRating": "5.0",
+        "description": "Italian Fine-Dining",
+        "featured": "true",
+        "uploader": "000000",
+        "reviews": {
+            "000000": {
+                "content": "Immaculate.",
+                "score": "5.0",
+                "uploader": "000002"
+            }
+        }
+    },
+    
+    "000002": {
+        "name": "Walmart",
+        "type": "Shopping",
+        "price-score": "1.8",
+        "avgRating": "4.0",
+        "description": "Corporate greed run unchecked",
+        "featured": "false",
+        "uploader": "000002",
+        "reviews": {
+            "000000": {
+                "content": "I love capitalism!!!",
+                "score": "4.0",
+                "uploader": "000003"
+            }
+        }
+    },
+    
+    "000003": {
+        "name": "Burger Joint",
+        "type": "Dining",
+        "price-score": "2.0",
+        "avgRating": "5.0",
+        "description": "Theres a burger.",
+        "featured": "true",
+        "uploader": "000003",
+        "reviews": {
+            "000000": {
+                "content": "Very good burgers.",
+                "score": "5.0",
+                "uploader": "000004"
+            }
+        }
+    }
+}
