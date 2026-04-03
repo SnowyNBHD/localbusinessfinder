@@ -1,9 +1,42 @@
 import styles from "./page.module.css";
 
-import BusinessCard from './components/BusinessCard'
+import BusinessCard from "./components/BusinessCard";
 import Page from "./components/Page";
 
-export default function Home() {
+type ApiBusiness = {
+  id: string;
+  name: string;
+  type: string;
+  description: string;
+  rating: number;
+};
+
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:4000";
+
+async function fetchFeaturedBusinesses(): Promise<ApiBusiness[]> {
+  const res = await fetch(`${API_BASE_URL}/api/business?featured=true`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error(`Failed to fetch businesses: ${res.status}`);
+  }
+
+  return (await res.json()) as ApiBusiness[];
+}
+
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  let businesses: ApiBusiness[] = [];
+  try {
+    businesses = await fetchFeaturedBusinesses();
+  } catch (e) {
+    // Keep UI rendering even if API is temporarily down.
+    console.error(e);
+  }
+
   return (
     <Page styles={styles}>
       <section className={styles.hero}></section>
@@ -11,34 +44,16 @@ export default function Home() {
         <div className={styles.navBackdrop}>Featured Businesses:</div>
 
         <section className={styles.featured}>
-          <BusinessCard 
-            url="business"
-            name="McDonalds"
-            type="Dining"
-            description="Fast-Food Restaurant"
-            rating={3.5}
-          />
-          <BusinessCard 
-            url="business"
-            name="Example"
-            type="Test"
-            description="This is a test"
-            rating={1}
-          />
-          <BusinessCard 
-            url="business"
-            name="Example"
-            type="Test"
-            description="This is a test"
-            rating={1.5}
-          />
-          <BusinessCard 
-            url="business"
-            name="Example"
-            type="Test"
-            description="This is a test"
-            rating={5}
-          />
+          {businesses.map((b) => (
+            <BusinessCard
+              key={b.id}
+              url={`/business/${b.id}`}
+              name={b.name}
+              type={b.type}
+              description={b.description}
+              rating={b.rating}
+            />
+          ))}
         </section>
     </Page>
   );
