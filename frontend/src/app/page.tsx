@@ -33,7 +33,6 @@ export default async function Home() {
   try {
     businesses = await fetchFeaturedBusinesses();
   } catch (e) {
-    // Keep UI rendering even if API is temporarily down.
     console.error(e);
   }
 
