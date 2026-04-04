@@ -1,5 +1,4 @@
 import styles from "./page.module.css";
-import Page from "../components/Page";
 import BusinessCard from "../components/BusinessCard";
 
 type ApiBusiness = {
@@ -48,9 +47,9 @@ export default async function Search({
   }
 
   return (
-    <Page styles={styles}>
+    <>
       <section>
-        {q ? <h1>Results for "{q}"</h1> : <h1>All Businesses</h1>}
+        {q ? <h1>{`Results for "${q}"`}</h1> : <h1>All Businesses</h1>}
 
         <div
           style={{
@@ -75,6 +74,6 @@ export default async function Search({
           )}
         </div>
       </section>
-    </Page>
+    </>
   );
 }

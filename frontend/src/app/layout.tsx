@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lexend_Deca, Nunito } from "next/font/google";
 import "./globals.css";
+import Nav from "./components/Nav";
 
 const lexendDeca = Lexend_Deca({
   variable: "--font-lexend-deca",
@@ -23,9 +24,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html>
       <body className={`${lexendDeca.variable} ${nunito.variable}`}>
-        {children}
+        <Nav />
+        <section className={"main"}>
+          {children}
+        </section>
+      
+        <div className={"verticalDivider"}></div>
+
+        <footer>Copyright © Never-Ever Welp Inc. Welp, Welp logo and related marks are NOT registered trademarks of Welp.</footer>
       </body>
     </html>
   );

@@ -1,7 +1,5 @@
 import styles from "./page.module.css";
-
 import BusinessCard from "./components/BusinessCard";
-import Page from "./components/Page";
 
 type ApiBusiness = {
   id: string;
@@ -37,7 +35,7 @@ export default async function Home() {
   }
 
   return (
-    <Page styles={styles}>
+    <>
       <section className={styles.hero}></section>
         
         <div className={styles.navBackdrop}>Featured Businesses:</div>
@@ -54,6 +52,6 @@ export default async function Home() {
             />
           ))}
         </section>
-    </Page>
+    </>
   );
 }

@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 
 import styles from "../../page.module.css";
-import Page from "../../components/Page";
 import Rating from "../../components/Rating";
 
 type ApiBusinessDetail = {
@@ -42,7 +41,7 @@ export default async function BusinessDetail({
   const data = (await res.json()) as ApiBusinessDetail;
 
   return (
-    <Page styles={styles}>
+    <>
       <section style={{ padding: 16 }}>
         <h1>{data.name}</h1>
         <p style={{ opacity: 0.9 }}>{data.type}</p>
@@ -64,7 +63,7 @@ export default async function BusinessDetail({
           </ul>
         )}
       </section>
-    </Page>
+    </>
   );
 }
 
