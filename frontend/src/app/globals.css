@@ -27,18 +27,22 @@ body {
 
 .main {
     /*background: linear-gradient(in hsl, #e66465, #9198e5);*/
-    background: linear-gradient(in hsl, light-dark(#6030ff, #201050), light-dark(#a0a0ff, #101020), light-dark(#ffffff, #222024));
+    background: linear-gradient(in hsl, light-dark(#6030ff, #201050)40%, light-dark(#a0a0ff, #101050), light-dark(#e0dfff, #322044));
     background-attachment: fixed;
     border-top: solid 2px light-dark(7f7f7f, #7f7f7f);
     flex-grow: 1;
     /* padding-top: 80px; */
-}s
+}
+
+.main > :first-child:not(#hero) {
+    margin-top: 120px;
+}
 
 footer {
     color: light-dark(#202020, #afafaf);
     
     box-shadow: 0 0 8px 4px #00000040;
-    
+     
     display: flex;
     align-items: center;
 

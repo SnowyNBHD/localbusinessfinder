@@ -36,7 +36,7 @@ export default async function Home() {
 
   return (
     <>
-      <section className={styles.hero}></section>
+      <section id="hero" className={styles.hero}></section>
         
         <div className={styles.navBackdrop}>Featured Businesses:</div>
 
